@@ -1,5 +1,7 @@
 # Text Alarm
 
+![alarm](My-alarm-clock.jpg)
+
 ## Description
 We are going to use Strip and Twilio to accomplish something simple.  You are going to write a system that will charge a user money to text them in the mroning.  This will help you understand Stripe, Twilio and scheduling with spring.
 
