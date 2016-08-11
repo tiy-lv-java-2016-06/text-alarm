@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+
+{{^user}}
+<form action="/login" method="post">
+    <input type="text" placeholder="Phone #" name="phone" required/>
+    <input type="password" placeholder="Password" name="password" required/>
+    <button type="submit">Login</button>
+</form>
+{{/user}}
+
+{{#user}}
+Please use our wake-up service for the small fee of $20.
+<form action="/pay" method="POST">
+    <script
+            src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+            data-key="pk_test_VudfQxUpbSS5AmON0qHlCWw3"
+            data-amount="2000"
+            data-name="Demo Site"
+            data-description="Widget"
+            data-image="/img/documentation/checkout/marketplace.png"
+            data-locale="auto">
+    </script>
+</form>
+{{/user}}
+
+</body>
+</html>
