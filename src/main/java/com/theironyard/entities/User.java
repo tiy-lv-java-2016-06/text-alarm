@@ -22,7 +22,7 @@ public class User {
     @Column(nullable = false)
     private String password;
 
-    private String stripeToken;
+    private String chargeId;
 
     @Column(nullable = false)
     @ColumnDefault("false")
@@ -60,12 +60,12 @@ public class User {
         this.password = password;
     }
 
-    public String getStripeToken() {
-        return stripeToken;
+    public String getChargeId() {
+        return chargeId;
     }
 
-    public void setStripeToken(String stripeToken) {
-        this.stripeToken = stripeToken;
+    public void setChargeId(String chargeId) {
+        this.chargeId = chargeId;
     }
 
     public boolean isPaid() {

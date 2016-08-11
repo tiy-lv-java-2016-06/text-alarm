@@ -73,7 +73,9 @@ public class TextAlarmController {
         chargeParams.put("source", stripeToken);
         chargeParams.put("description", "Wake up service fee");
 
-        Charge.create(chargeParams);
+        Charge charge = Charge.create(chargeParams);
+        user.setChargeId(charge.getId());
+
         user.setPaid(true);
         userRepository.save(user);
 
