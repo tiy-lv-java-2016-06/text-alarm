@@ -27,9 +27,9 @@ public class TwilioAlarm {
         smsFactory = twilioAccount.getSmsFactory();
     }
 
-    @Scheduled(cron = " 0 7 * * * *")
+    @Scheduled(cron = " 0 0 9 * * *")
     public void wakeUpAlarm() throws TwilioRestException {
-        String phone = "7023434471";
+        String phone = "";
         List<NameValuePair> params = new ArrayList<>();
         params.add(new BasicNameValuePair("From", "7026080979"));
         params.add(new BasicNameValuePair("To", phone));
